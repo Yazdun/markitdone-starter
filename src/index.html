@@ -1,68 +1,357 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="EN">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      gtag("config", "UA-XXXXXX-X");
+    </script>
 
-    gtag('config', 'UA-XXXXXX-X');
-  </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercadito</title>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Starter Kit</title>
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no" />
 
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <!-- Web Application Manifest -->
-  <link rel="manifest" href="manifest.json">
-  
-  <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="MarkItAsDone">
-  
-  <!-- Add to homescreen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="MarkItAsDone">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1.0.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=1.0.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1.0.0">
-  <link rel="manifest" href="site.webmanifest?v=1.0.0">
-  <link rel="mask-icon" href="safari-pinned-tab.svg?v=1.0.0" color="#3c3ce5">
-  <link rel="shortcut icon" href="favicon.ico?v=1.0.0">
-  
-  <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="mstile-150x150.png">
-  <meta name="msapplication-TileColor" content="#3c3ce5">
-  
-  <!-- Color the status bar on mobile devices -->
-  <meta name="theme-color" content="#ffffff">
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json" />
 
-  <!-- build:css styles/vendor.min.css -->
-  <!-- endbuild -->
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="MarkItAsDone" />
 
-  <!-- build:css styles/main.min.css -->
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild -->
-</head>
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="MarkItAsDone" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="apple-touch-icon.png?v=1.0.0"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon-32x32.png?v=1.0.0"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon-16x16.png?v=1.0.0"
+    />
+    <link rel="manifest" href="site.webmanifest?v=1.0.0" />
+    <link
+      rel="mask-icon"
+      href="safari-pinned-tab.svg?v=1.0.0"
+      color="#3c3ce5"
+    />
+    <link rel="shortcut icon" href="favicon.ico?v=1.0.0" />
 
-<body>
-  <h1>Hi, FROM HTML STARTER KIT</h1>
-  <!-- build:js scripts/vendor.min.js -->
-  <!-- endbuild -->
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="mstile-150x150.png" />
+    <meta name="msapplication-TileColor" content="#3c3ce5" />
 
-  <!-- build:js scripts/main.min.js -->
-  <script src="scripts/main.js"></script>
-  <!-- endbuild -->
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#ffffff" />
 
-</body>
+    <!-- Roboto Slab Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- build:css styles/vendor.min.css -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.min.css -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- endbuild -->
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img src="./assets/images/logo.png" alt="" />
+        <button class="header__cta" id="burger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- ** LARGE SCREEN NAVIGATIONS ** -->
+        <ul>
+          <li>
+            <a href="#">why us</a>
+          </li>
+          <li>
+            <a href="#">menu</a>
+          </li>
+          <li>
+            <a href="#">popular dishes</a>
+          </li>
+          <li>
+            <a href="#">contact</a>
+          </li>
+        </ul>
+
+        <!-- ** MOBILE MENU ** -->
+        <div>
+          <button>&times;</button>
+          <ul>
+            <li>
+              <a href="#">why us</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#">menu</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#">popular dishes</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#">contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ::: HERO SECTION ::: -->
+      <div>
+        <h1>Book a table in the best Mexican restaturant</h1>
+        <p>30% off for the Christmas</p>
+        <div class="hero__cta">
+          <a href="#">Book Now</a>
+          <a href="#">See Menu</a>
+        </div>
+      </div>
+
+      <!-- ::: FEATURE SECTION ::: -->
+      <div>
+        <div>
+          <div>
+            <h2>Why Customers Like us?</h2>
+            <p>
+              When we first opened our restaturant, it didn't take a long time
+              ofr us to prove our diffrence.
+              <br />
+              <br />
+              Our native chefs, the Chinese atmosphere of the restaturant, the
+              variety of dishes, the high quality of foods, and affordable
+              prices made us well-known very soon.
+              <br />
+              <br />
+              Today, we have customers not only from this area but also from
+              other cities.
+            </p>
+          </div>
+          <div>
+            <img src="./assets/images/chef.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- ::: OUR MENU SECTION ::: -->
+      <div class="menu">
+        <!-- ** MENU TITLE ** -->
+        <div>
+          <h2>Our Menu</h2>
+          <ul>
+            <li>
+              <a href="#">starter</a>
+            </li>
+            <li>
+              <a href="#">main dishes</a>
+            </li>
+            <li>
+              <a href="#">desserts</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ** MENU ITEMS ** -->
+        <ul>
+          <!-- -- item -- -->
+          <li>
+            <div>
+              <h3>Dim Sums</h3>
+              <p>Chestnuts, mushroom, spring onion, ginger, coriander</p>
+            </div>
+            <span> $35 </span>
+          </li>
+
+          <!-- -- item -- -->
+          <li>
+            <div>
+              <h3>Pork Wontons</h3>
+              <p>Pork, chestnuts, bamboo shoots, spring onion egg, wonton</p>
+            </div>
+            <span>$30</span>
+          </li>
+
+          <!-- -- item -- -->
+          <li>
+            <div>
+              <h3>Real Kung Pao chicken</h3>
+              <p>
+                Peanuts, chicken tights, rice wine, cornflour, soy sauce,
+                chillies
+              </p>
+            </div>
+            <span>$18</span>
+          </li>
+
+          <!-- -- item -- -->
+          <li>
+            <div>
+              <h3>Stir Fried Tofu with Rice</h3>
+              <p>Tofu, rice, vinger, soy sauce, seasmae oil, ginger</p>
+            </div>
+            <span>$25</span>
+          </li>
+
+          <!-- -- item -- -->
+          <li>
+            <div>
+              <h3>Chinese pepper steak</h3>
+              <p>Steak, pepper, vinger wine, ginger</p>
+            </div>
+            <span>$15</span>
+          </li>
+
+          <!-- -- item -- -->
+          <li>
+            <div>
+              <h3>Chicken with Chestnuts</h3>
+              <p>Chicken, chestnuts, soy sauce, vinger</p>
+            </div>
+            <span>$19</span>
+          </li>
+
+          <!-- -- item -- -->
+          <li>
+            <div>
+              <h3>Honey Walnut Shrimp</h3>
+              <p>Wulnuts, mayonnaise, prawns, honey, egg, rice flour</p>
+            </div>
+            <span>$15</span>
+          </li>
+
+          <!-- -- item -- -->
+          <li>
+            <div>
+              <h3>Kung Pao chicken</h3>
+              <p>
+                Chicken tights, shaoxing wine, soy sauce, chilli, peanuts,
+                cucumber
+              </p>
+            </div>
+            <span>$29</span>
+          </li>
+
+          <!-- -- item -- -->
+          <li>
+            <div>
+              <h3>Tsao's chicken</h3>
+              <p>
+                Chicken tights, rice vinger, rice wine, orange zest, banana
+                ketchup, garlic
+              </p>
+            </div>
+            <span>$35</span>
+          </li>
+
+          <!-- -- item -- -->
+          <li>
+            <div>
+              <h3>Chinese Steamed Halibut</h3>
+              <p>Fillet halibut, ginger, coriander, soy sauce</p>
+            </div>
+            <span>$19</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ::: DISHES SECTION ::: -->
+      <div>
+        <!-- content goes here -->
+        <div>
+          <h2>The Most Popular Dishes</h2>
+          <div>1/3</div>
+        </div>
+
+        <div>
+          <img src="./assets/images/dish.jpg" alt="" />
+          <div>
+            <h3>Sweet and sour pork</h3>
+            <p>
+              Sweet and Sour Pork Tenderloin is one of the classic cuisines in
+              China. Pork tenderloin is the main material of this dish.
+              <br />
+              The dish tastes sour and sweet, but also crispy outside and soft
+              inside, which can stimulate people’s appetite.
+            </p>
+            <p>$36</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ::: BOOKING SECTION ::: -->
+      <div>
+        <div>
+          <h2>Book a Table</h2>
+          <p>
+            When we first opened our restaturant, it didn't take a long time for
+            us to prove our diffrence.
+          </p>
+        </div>
+        <form action="">
+          <div>
+            <label for="name">name</label>
+            <input type="text" id="name" />
+          </div>
+        </form>
+      </div>
+
+      <!-- ::: CONTACT SECTION ::: -->
+      <div>
+        <!-- content goes here -->
+        contact us section
+      </div>
+
+      <!-- ::: FOOTER SECTION ::: -->
+      <footer>
+        <p>All rights are reserved for Mercadito Restaurant © 2019</p>
+      </footer>
+    </main>
+    <!-- build:js scripts/vendor.min.js -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.min.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
 </html>
