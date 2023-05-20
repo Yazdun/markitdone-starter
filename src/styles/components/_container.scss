@@ -3,3 +3,9 @@
   max-width: 70.5rem;
   margin-inline: auto;
 }
+
+.wrapper {
+  @include mq(md) {
+    padding-inline: 1rem;
+  }
+}
