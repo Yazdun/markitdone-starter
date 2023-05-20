@@ -6,6 +6,7 @@
 
   @include mq(md) {
     border: 2px solid $clr-secondary-1;
+    padding: 4rem;
   }
 
   &--header {
