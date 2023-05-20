@@ -1,0 +1,137 @@
+.header {
+  position: fixed;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  z-index: 100;
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.header__scrolled {
+  background-color: $bg-dark-1;
+  border-bottom: 2px solid $clr-secondary-1;
+}
+
+.header nav {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mq(sm) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @include mq(md) {
+    flex-direction: row;
+
+    gap: 1rem;
+  }
+}
+
+.header nav img {
+  max-width: 6rem;
+}
+
+.header__cta {
+  width: 3rem;
+  height: 3rem;
+  background-color: $bg-dark-1;
+  border-radius: 0.5rem;
+  border: 2px solid $clr-secondary-1;
+
+  @include mq(sm) {
+    display: none;
+  }
+}
+
+// ::: MOBILE MENU :::
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.9)
+  );
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+
+  @include mq(sm) {
+    display: none;
+  }
+}
+
+.mobile-menu-overlay--open {
+  transform: translateX(0);
+}
+
+.mobile-menu-overlay__close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 24px;
+  color: #fff;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu--open {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.mobile-menu__item {
+  margin-bottom: 20px;
+}
+
+.mobile-menu__link {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: 0.3s;
+
+  &:hover {
+    color: $clr-primary-1;
+  }
+}
+
+// ::: LARGE SCREEN NAVIGATIONS
+.header__links {
+  display: none;
+
+  @include mq(sm) {
+    display: flex;
+    gap: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.header__links a {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}

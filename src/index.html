@@ -94,15 +94,15 @@
   </head>
 
   <body>
-    <header>
-      <nav>
+    <header class="header" id="header">
+      <nav class="c-container">
         <img src="./assets/images/logo.png" alt="" />
         <button class="header__cta" id="burger">
           <i class="fa-solid fa-bars"></i>
         </button>
 
         <!-- ** LARGE SCREEN NAVIGATIONS ** -->
-        <ul>
+        <ul class="header__links">
           <li>
             <a href="#">why us</a>
           </li>
@@ -118,20 +118,22 @@
         </ul>
 
         <!-- ** MOBILE MENU ** -->
-        <div>
-          <button>&times;</button>
-          <ul>
-            <li>
-              <a href="#">why us</a>
+        <div class="mobile-menu-overlay">
+          <button class="mobile-menu-overlay__close-btn header__cta">
+            &times;
+          </button>
+          <ul class="mobile-menu">
+            <li class="mobile-menu__item">
+              <a href="#" class="mobile-menu__link">why us</a>
             </li>
             <li class="mobile-menu__item">
-              <a href="#">menu</a>
+              <a href="#" class="mobile-menu__link">menu</a>
             </li>
             <li class="mobile-menu__item">
-              <a href="#">popular dishes</a>
+              <a href="#" class="mobile-menu__link">popular dishes</a>
             </li>
             <li class="mobile-menu__item">
-              <a href="#">contact</a>
+              <a href="#" class="mobile-menu__link">contact</a>
             </li>
           </ul>
         </div>
