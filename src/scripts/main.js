@@ -20,6 +20,7 @@
   let mobileMenuOverlay = document.querySelector(".mobile-menu-overlay");
   let closeBtn = document.querySelector(".mobile-menu-overlay__close-btn");
   let mobileMenu = document.querySelector(".mobile-menu");
+  const mobileMenuLinks = document.querySelectorAll(".mobile-menu__link");
 
   hamburgerBtn.addEventListener("click", function () {
     mobileMenuOverlay.classList.add("mobile-menu-overlay--open");
@@ -29,6 +30,13 @@
   closeBtn.addEventListener("click", function () {
     mobileMenuOverlay.classList.remove("mobile-menu-overlay--open");
     mobileMenu.classList.remove("mobile-menu--open");
+  });
+
+  mobileMenuLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      mobileMenuOverlay.classList.remove("mobile-menu-overlay--open");
+      mobileMenu.classList.remove("mobile-menu--open");
+    });
   });
 
   // ::: CAROUSEL :::
