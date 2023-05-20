@@ -25,6 +25,10 @@
       gap: 1rem;
       align-items: center;
 
+      @include mq(lg) {
+        flex-direction: row;
+      }
+
       i {
         font-size: 1.5rem;
       }
