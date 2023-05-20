@@ -1,0 +1,86 @@
+.c-carousel-container {
+  position: relative;
+  width: 100%;
+  height: 40rem;
+  overflow: hidden;
+
+  @include mq(sm) {
+    height: 37rem;
+  }
+
+  @include mq(lg) {
+    height: 20rem;
+  }
+}
+
+.c-carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  @include mq(lg) {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.c-carousel-item__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 40rem;
+
+  @include mq(sm) {
+    text-align: center;
+  }
+
+  @include mq(lg) {
+    align-items: flex-start;
+    text-align: left;
+    width: 50%;
+  }
+}
+
+.c-carousel-item.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.c-carousel-item.next {
+  transform: translateX(100%);
+}
+
+.c-carousel-item.prev {
+  transform: translateX(-100%);
+}
+
+.c-carousel-item img {
+  max-width: 40rem;
+
+  @include mq(lg) {
+    max-width: 30rem;
+    object-fit: cover;
+  }
+}
+
+#prevBtn,
+#nextBtn {
+  cursor: pointer;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
