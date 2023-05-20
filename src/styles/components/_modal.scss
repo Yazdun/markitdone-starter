@@ -1,0 +1,61 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  padding: 1rem;
+
+  &__content {
+    background-color: $bg-dark-2;
+    padding: 20px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 30rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    p {
+      max-width: 20rem;
+      margin: auto;
+    }
+  }
+
+  &__checkmark {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    font-size: 2rem;
+    color: yellow;
+    margin: auto;
+    outline: 2px solid $clr-secondary-1;
+  }
+
+  &--open {
+    opacity: 1;
+    pointer-events: auto;
+
+    & .modal__content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

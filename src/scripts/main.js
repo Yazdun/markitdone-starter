@@ -125,6 +125,20 @@
     nextBtn.disabled = currentIndex === carouselItems.length - 1;
   }
 
+  // ::: FORM MODAL :::
+  const modalTrigger = document.querySelector(".modal-trigger");
+  const modal = document.getElementById("modal");
+  const modalClose = document.querySelector("[data-modal-close]");
+
+  // Test modal functionality
+  // modalTrigger.addEventListener("click", function () {
+  //   modal.classList.add("modal--open");
+  // });
+
+  modalClose.addEventListener("click", function () {
+    modal.classList.remove("modal--open");
+  });
+
   // ::: FORM VALIDATION
   const reservationForm = document.getElementById("reservationForm");
   const decreaseBtn = document.getElementById("decreaseBtn");
@@ -148,7 +162,7 @@
     event.preventDefault();
     if (validateForm()) {
       // Form is valid, you can proceed with form submission or further processing
-      console.log("Form submitted successfully");
+      modal.classList.add("modal--open");
       reservationForm.reset();
     }
   });
