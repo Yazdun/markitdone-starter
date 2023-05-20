@@ -124,4 +124,109 @@
     prevBtn.disabled = currentIndex === 0;
     nextBtn.disabled = currentIndex === carouselItems.length - 1;
   }
+
+  // ::: FORM VALIDATION
+  const reservationForm = document.getElementById("reservationForm");
+  const decreaseBtn = document.getElementById("decreaseBtn");
+  const increaseBtn = document.getElementById("increaseBtn");
+  const peopleInput = document.getElementById("people");
+
+  // Decrease button event listener
+  decreaseBtn.addEventListener("click", function () {
+    if (peopleInput.value > 1) {
+      peopleInput.value--;
+    }
+  });
+
+  // Increase button event listener
+  increaseBtn.addEventListener("click", function () {
+    peopleInput.value++;
+  });
+
+  // Form submit event listener
+  reservationForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (validateForm()) {
+      // Form is valid, you can proceed with form submission or further processing
+      console.log("Form submitted successfully");
+      reservationForm.reset();
+    }
+  });
+
+  // Function to validate the form fields
+  function validateForm() {
+    let isValid = true;
+
+    // Validate name field
+    const nameInput = document.getElementById("name");
+    if (nameInput.value.trim() === "") {
+      isValid = false;
+      setErrorFor(nameInput, "Please enter your name");
+    } else {
+      setSuccessFor(nameInput);
+    }
+
+    // Validate phone field
+    const phoneInput = document.getElementById("phone");
+    const phoneRegex = /^\d{10}$/; // Assumes a 10-digit phone number
+    if (!phoneRegex.test(phoneInput.value.trim())) {
+      isValid = false;
+      setErrorFor(phoneInput, "Please enter a valid phone number");
+    } else {
+      setSuccessFor(phoneInput);
+    }
+
+    // Validate email field
+    const emailInput = document.getElementById("email");
+    const emailRegex = /^\S+@\S+\.\S+$/; // Basic email validation regex
+    if (!emailRegex.test(emailInput.value.trim())) {
+      isValid = false;
+      setErrorFor(emailInput, "Please enter a valid email address");
+    } else {
+      setSuccessFor(emailInput);
+    }
+
+    // Validate date field
+    const dateInput = document.getElementById("date");
+    const currentDate = new Date().toISOString().split("T")[0]; // Get current date
+    if (dateInput.value.trim() === "" || dateInput.value < currentDate) {
+      isValid = false;
+      setErrorFor(dateInput, "Please choose a valid date");
+    } else {
+      setSuccessFor(dateInput);
+    }
+
+    // Validate time field
+    const timeInput = document.getElementById("time");
+    if (timeInput.value.trim() === "") {
+      isValid = false;
+      setErrorFor(timeInput, "Please enter a time");
+    } else {
+      setSuccessFor(timeInput);
+    }
+
+    // Validate number of people field
+    if (peopleInput.value < 1) {
+      isValid = false;
+      setErrorFor(peopleInput, "Number of people must be at least 1");
+    } else {
+      setSuccessFor(peopleInput);
+    }
+
+    return isValid;
+  }
+
+  // Function to set error state for a field
+  function setErrorFor(input, errorMessage) {
+    const formControl = input.parentElement;
+    const errorText = formControl.querySelector(".error");
+    errorText.innerText = errorMessage;
+  }
+
+  // Function to set success state for a field
+  function setSuccessFor(input) {
+    const formControl = input.parentElement;
+    const errorText = formControl.querySelector(".error");
+    errorText.innerText = "";
+  }
 })();

@@ -382,20 +382,61 @@
       </div>
 
       <!-- ::: BOOKING SECTION ::: -->
-      <div>
-        <div>
-          <h2>Book a Table</h2>
-          <p>
-            When we first opened our restaturant, it didn't take a long time for
-            us to prove our diffrence.
-          </p>
-        </div>
-        <form action="">
-          <div>
-            <label for="name">name</label>
-            <input type="text" id="name" />
+      <div class="booking">
+        <div class="c-container booking--body">
+          <div class="booking--header">
+            <h2 class="c-title">Book a Table</h2>
+            <p>
+              When we first opened our restaturant, it didn't take a long time
+              for us to prove our diffrence.
+            </p>
           </div>
-        </form>
+          <form class="c-form" id="reservationForm" novalidate>
+            <div class="c-input">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required />
+              <div class="error"></div>
+            </div>
+            <div class="c-input">
+              <label for="phone">Your Phone:</label>
+              <input type="tel" id="phone" name="phone" required />
+              <div class="error"></div>
+            </div>
+            <div class="c-input">
+              <label for="email">Your Email:</label>
+              <input type="email" id="email" name="email" required />
+              <div class="error"></div>
+            </div>
+            <div class="c-input">
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" required />
+              <div class="error"></div>
+            </div>
+            <div class="c-input">
+              <label for="time">Time:</label>
+              <input type="time" id="time" name="time" required />
+              <div class="error"></div>
+            </div>
+            <div class="c-input">
+              <label for="people">Number of People:</label>
+              <div class="c-input__num">
+                <button type="button" id="decreaseBtn">-</button>
+                <input
+                  type="number"
+                  id="people"
+                  name="people"
+                  value="1"
+                  min="1"
+                  required
+                />
+                <button type="button" id="increaseBtn">+</button>
+              </div>
+              <div class="error"></div>
+            </div>
+
+            <button type="submit" class="c-btn c-btn--primary">Book Now</button>
+          </form>
+        </div>
       </div>
 
       <!-- ::: CONTACT SECTION ::: -->

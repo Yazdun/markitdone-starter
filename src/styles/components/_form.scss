@@ -1,0 +1,70 @@
+.c-form {
+  background-color: $bg-dark-2;
+  padding: 4rem 1rem;
+  border-top: 2px solid $clr-secondary-1;
+  border-bottom: 2px solid $clr-secondary-1;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+
+  @include mq(md) {
+    border: 2px solid $clr-secondary-1;
+    max-width: 30rem;
+    padding: 2rem;
+  }
+}
+
+.c-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &__num {
+    display: flex;
+    gap: 0.5rem;
+    position: relative;
+
+    #decreaseBtn {
+      position: absolute;
+      left: 1rem;
+      top: 0;
+      bottom: 0;
+      font-size: 1.3rem;
+    }
+    #increaseBtn {
+      position: absolute;
+      right: 1rem;
+      font-size: 1.3rem;
+      top: 0;
+      bottom: 0;
+    }
+
+    input {
+      padding-inline: 3rem !important;
+    }
+  }
+
+  label {
+    text-transform: uppercase;
+  }
+
+  input {
+    padding: 1rem;
+    background-color: $bg-dark-3;
+    border: none;
+    outline: none;
+    color: white;
+    color-scheme: dark;
+    border-radius: 0.5rem;
+    width: 100%;
+
+    &:focus {
+      outline: 2px solid white;
+    }
+  }
+}
+
+.error {
+  font-weight: bold;
+  color: red;
+}
