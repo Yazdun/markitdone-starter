@@ -243,4 +243,9 @@
     const errorText = formControl.querySelector(".error");
     errorText.innerText = "";
   }
+
+  // ::: FOOTER :::
+  const footerDate = document.getElementById("footerData");
+  const currentYear = new Date().getFullYear();
+  footerDate.innerText = currentYear;
 })();
