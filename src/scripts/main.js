@@ -35,11 +35,14 @@
   const carouselItems = document.querySelectorAll(".c-carousel-item");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
+  const currentItemDisplay = document.getElementById("activeIndex");
   let currentIndex = 0;
   let isAnimating = false;
 
   // Show the initial item
   carouselItems[currentIndex].classList.add("active");
+  updateCurrentItemDisplay();
+  updateButtonState();
 
   // Function to show the next item
   function showNextItem() {
@@ -60,6 +63,8 @@
         },
         { once: true }
       );
+      updateCurrentItemDisplay();
+      updateButtonState();
     }, 10);
   }
 
@@ -83,6 +88,8 @@
         },
         { once: true }
       );
+      updateCurrentItemDisplay();
+      updateButtonState();
     }, 10);
   }
 
@@ -97,4 +104,24 @@
     showPrevItem();
     resetAutoShowTimer();
   });
+
+  // Function to automatically show the next item every 5 seconds
+  let timer = setInterval(showNextItem, 5000);
+
+  // Function to reset the auto-show timer
+  function resetAutoShowTimer() {
+    clearInterval(timer);
+    timer = setInterval(showNextItem, 5000);
+  }
+
+  // Function to update the current active item display
+  function updateCurrentItemDisplay() {
+    currentItemDisplay.textContent = currentIndex + 1;
+  }
+
+  // Function to update the button state
+  function updateButtonState() {
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex === carouselItems.length - 1;
+  }
 })();
