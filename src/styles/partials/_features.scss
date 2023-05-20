@@ -1,0 +1,63 @@
+.feature--card {
+  background-color: $bg-dark-2;
+  margin-bottom: 10rem;
+  border-top: 2px solid $clr-secondary-1;
+  border-bottom: 2px solid $clr-secondary-1;
+  position: relative;
+  padding-bottom: 17rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 1rem;
+
+    @include mq(sm) {
+      padding: 2rem;
+    }
+
+    @include mq(lg) {
+      width: 50%;
+      padding: 5rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    bottom: -5rem;
+    right: 1rem;
+    left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(lg) {
+      right: 4rem;
+      bottom: -7rem;
+      justify-content: flex-end;
+    }
+  }
+
+  &__image img {
+    width: 100%;
+    max-width: 20rem;
+    @include mq(lg) {
+      max-width: 25rem;
+    }
+  }
+
+  @include mq(sm) {
+    border: 2px solid $clr-secondary-1;
+    padding-bottom: 19rem;
+  }
+
+  @include mq(lg) {
+    padding: 0;
+  }
+}
+
+.feature {
+  @include mq(sm) {
+    padding: 4rem 1rem;
+  }
+}
