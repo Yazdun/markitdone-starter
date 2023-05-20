@@ -1,0 +1,22 @@
+.c-btn {
+  padding: 0.8rem 2rem;
+  display: flex;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+
+  &--primary {
+    background-color: $clr-primary-1;
+
+    &:hover {
+      background-color: $clr-primary-2;
+    }
+  }
+
+  &--secondary {
+    background-color: $clr-secondary-1;
+
+    &:hover {
+      background-color: $clr-secondary-2;
+    }
+  }
+}
