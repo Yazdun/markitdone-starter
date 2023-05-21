@@ -11,6 +11,11 @@
     border: 2px solid $clr-secondary-1;
     max-width: 30rem;
     padding: 2rem;
+    margin: auto;
+  }
+
+  @include mq(lg) {
+    margin: 0;
   }
 }
 
