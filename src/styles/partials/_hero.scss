@@ -1,7 +1,7 @@
 .hero {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
-    url("../../assets/mobile/hero.jpg");
+    url("../../images/mobile/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -16,12 +16,12 @@
 
   @include mq(sm) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
-      url("../../assets/tablet/hero.jpg");
+      url("../../images/tablet/hero.jpg");
   }
 
   @include mq(md) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
-      url("../../assets/desktop/hero.jpg");
+      url("../../images/desktop/hero.jpg");
   }
 }
 

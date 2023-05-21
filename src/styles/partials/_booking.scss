@@ -7,7 +7,7 @@
       rgba(0, 0, 0, 1),
       rgba(0, 0, 0, 0.7)
     ),
-    url("../../assets/desktop/booktable.webp");
+    url("../../images/desktop/booktable.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -21,7 +21,7 @@
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0)
       ),
-      url("../../assets/tablet/booktable.jpg");
+      url("../../images/tablet/booktable.jpg");
   }
 
   @include mq(md) {
@@ -34,7 +34,7 @@
         rgba(0, 0, 0, 0.6),
         rgba(0, 0, 0, 0)
       ),
-      url("../../assets/desktop/booktable.jpg");
+      url("../../images/desktop/booktable.jpg");
   }
 }
 
