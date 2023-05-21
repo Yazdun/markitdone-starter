@@ -119,15 +119,6 @@
     resetAutoShowTimer();
   });
 
-  // Function to automatically show the next item every 5 seconds
-  let timer = setInterval(showNextItem, 5000);
-
-  // Function to reset the auto-show timer
-  function resetAutoShowTimer() {
-    clearInterval(timer);
-    timer = setInterval(showNextItem, 5000);
-  }
-
   // Function to update the current active item display
   function updateCurrentItemDisplay() {
     currentItemDisplay.textContent = currentIndex + 1;
