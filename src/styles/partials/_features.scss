@@ -39,10 +39,11 @@
   }
 
   &__image img {
-    width: 100%;
-    max-width: 20rem;
+    width: 20rem;
+    height: 24rem;
     @include mq(lg) {
-      max-width: 25rem;
+      height: 29rem;
+      width: 25rem;
     }
   }
 
