@@ -2,7 +2,9 @@
 (function () {
   ("use strict");
   document.addEventListener("DOMContentLoaded", function () {
+    // ::::::::::::::::::::::::::::::::::::::::
     // ::: ADDING COLOR TO NAVBAR ON SCROLL :::
+    // ::::::::::::::::::::::::::::::::::::::::
     window.addEventListener("scroll", function () {
       let navbar = document.getElementById("header");
       let scrollPosition = window.scrollY;
@@ -15,7 +17,9 @@
     });
   });
 
+  // :::::::::::::::::::
   // ::: MOBILE MENU :::
+  // :::::::::::::::::::
   let hamburgerBtn = document.getElementById("burger");
   let mobileMenuOverlay = document.querySelector(".mobile-menu-overlay");
   let closeBtn = document.querySelector(".mobile-menu-overlay__close-btn");
@@ -39,7 +43,9 @@
     });
   });
 
+  // ::::::::::::::::
   // ::: CAROUSEL :::
+  // ::::::::::::::::
   const carouselItems = document.querySelectorAll(".c-carousel-item");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
@@ -133,7 +139,9 @@
     nextBtn.disabled = currentIndex === carouselItems.length - 1;
   }
 
+  // ::::::::::::::::::
   // ::: FORM MODAL :::
+  // ::::::::::::::::::
   const modalTrigger = document.querySelector(".modal-trigger");
   const modal = document.getElementById("modal");
   const modalClose = document.querySelector("[data-modal-close]");
@@ -147,7 +155,9 @@
     modal.classList.remove("modal--open");
   });
 
-  // ::: FORM VALIDATION
+  // :::::::::::::::::::::::
+  // ::: FORM VALIDATION :::
+  // :::::::::::::::::::::::
   const reservationForm = document.getElementById("reservationForm");
   const decreaseBtn = document.getElementById("decreaseBtn");
   const increaseBtn = document.getElementById("increaseBtn");
@@ -252,7 +262,9 @@
     errorText.innerText = "";
   }
 
+  // ::::::::::::::
   // ::: FOOTER :::
+  // ::::::::::::::
   const footerDate = document.getElementById("footerData");
   const currentYear = new Date().getFullYear();
   footerDate.innerText = currentYear;
