@@ -32,8 +32,8 @@
     align-items: center;
 
     @include mq(lg) {
-      right: 4rem;
-      bottom: -7rem;
+      right: 3.5rem;
+      bottom: -5rem;
       justify-content: flex-end;
     }
   }
