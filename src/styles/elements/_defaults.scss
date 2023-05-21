@@ -66,4 +66,12 @@ p {
 #contact,
 #booking {
   scroll-margin-block-start: 5rem;
+
+  @include mq(sm) {
+    scroll-margin-block-start: 8rem;
+  }
+
+  @include mq(md) {
+    scroll-margin-block-start: 5rem;
+  }
 }
