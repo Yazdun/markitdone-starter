@@ -40,9 +40,7 @@
 
   &__image img {
     width: 20rem;
-    height: 24rem;
     @include mq(lg) {
-      height: 29rem;
       width: 25rem;
     }
   }
